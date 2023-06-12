@@ -1,0 +1,56 @@
+#home{
+    background: linear-gradient(rgba(0,0,0,0.8) , rgba(0, 0, 0, 0.8)) , url("../../images/banner1.jpg");
+    /* min-height: 100vh; */
+    height: auto;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+    padding: 8rem 0 8rem 0;
+}
+.home-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.home-header-mainheader{
+    font-family: 'Geologica', sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    text-align: center;
+}
+.home-header-description{
+    font-weight: 300;
+    margin: 1rem 0 1rem 0;
+}
+.home-about-btn{
+    height: 3rem;
+    width:9.5rem;
+    color:white;
+    border:none;
+    outline:none;
+    background-color: var(--redcolor);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: 0.1s ease-in-out;
+}
+.home-about-btn:hover{
+    background-color: red;
+}
+.auto-type{
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+    .home-header-mainheader{
+        font-size: 2rem;
+    }
+}
+

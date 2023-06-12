@@ -1,0 +1,131 @@
+.navbar{
+    height: var(--navheight);
+    width: 100vw;
+    display: flex;
+    /* justify-content: flex-start; */
+    justify-content: space-between;
+    align-items: center;
+    gap:5rem;
+    /* box-shadow: 0px 0px 2px rgb(155, 155, 155); */
+    padding: 0 3rem 0 3rem;
+    position: absolute;
+    /* backdrop-filter: blur(30px); */
+    background-color: rgba(0, 0, 0 , 0.001);
+}
+.navbar-logo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 1.4rem;
+    cursor: pointer;
+    /* color:rgb(0, 0, 0); */
+    color:white;
+}
+.navbar-logo p{
+    font-weight: 700;
+    color:var(--redcolor)
+}
+.navbar-links{
+    height: 100vh;
+    width:auto;
+}
+.navbar-links ul{
+    height: 100%;
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:2rem;
+}
+.navbar-links ul li{
+    font-weight: 400;
+}
+.navbar-links ul li a{
+    /* color:rgb(0, 0, 0); */
+    color:white;
+}
+.navbar-links ul li a:hover{
+    color:var(--redcolor);
+}
+#contact{
+    height: 2.5rem;
+    width: 8rem;
+    background-color: var(--redcolor);
+    color:white;
+    border:none;
+    outline:none;
+    transition: .1s ease-in-out;
+    cursor: pointer;
+}
+#contact:hover{
+    background-color: red;
+}
+.fa-bars-staggered{
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: none;
+    color:rgb(255, 255, 255);
+}
+.fa-xmark{
+    font-size: 1.3rem;
+    cursor: pointer;
+    color:rgb(255, 255, 255);
+    z-index: 100;
+    position: fixed;
+}
+
+@media (max-width: 768px) {
+    .navbar{
+        padding: 0 1.5rem 0 1.5rem;
+    }
+}
+@media (max-width: 660px) {
+    .fa-bars-staggered{
+        display: block;
+        right:1.5rem;
+    }
+    .navbar-links{
+        position: fixed;
+        top:0;
+        left:0;
+        animation: slideIn 0.4s ease;
+        transition: 0.4s ease;
+        transform: translateY(0%);
+        display: none;
+        background-color: rgb(43, 43, 43);
+        height: 100vh;
+        
+    }
+    .navbar-links ul{
+        min-height: calc(100vh - var(--navheight));
+        width:100vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.1rem;
+        padding:10rem 0 4rem 0;
+        gap:3rem;
+        overflow: hidden;
+    }
+    .navbar-links ul li a{
+        color:rgb(255, 255, 255);
+    }
+    #contact{
+        height: 2.8rem;
+        width: 9rem;
+    }
+    .active{
+        display: block;
+    }
+    .close{
+        display: none;
+    }
+    @keyframes slideIn {
+        0%{
+            transform: translateY(-100%);
+        }
+        100%{
+            transform: translateY(0);
+        }
+    }
+}

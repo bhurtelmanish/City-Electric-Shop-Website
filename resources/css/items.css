@@ -1,0 +1,132 @@
+#items{
+    height: auto;
+    background-color: rgb(247, 247, 247);
+    width:100vw;
+    margin-top:3rem;
+    padding:3rem 0 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.items-header{
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+.items-list-container{
+    height: auto;
+    width:100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap:2rem;
+}
+.items-list-item{
+    height: auto;
+    width:100%;
+    /* background-color: rgb(255, 216, 216); */
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
+    padding-bottom: 3rem;
+}
+.items-list-header{
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1rem;
+}
+.items-card-container{
+    height: auto;
+    width:auto;
+    max-width:1400px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:3rem;
+    padding:0 3rem 0 3rem;
+
+}
+.items-card-img-container{
+    height: 16rem;
+    width:16rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    overflow: hidden;
+}
+.items-card-img{
+    height: 100%;
+    width:100%;
+    transition: 0.1s ease-in-out;
+}
+.items-card-img:hover{
+    transform: scale(1.05);
+}
+.items-card{
+    background-color: rgb(255, 255, 255);
+    width:fit-content;
+    display: flex;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgb(234, 234, 234);
+}
+
+.items-card-description{
+    height: 16rem;
+    width:auto;
+    padding: 0 2rem 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.loadmore-container{
+    width:100vw;
+    text-align: center;
+}
+.loadmore{
+    height: 3rem;
+    width:9.5rem;
+    color:white;
+    border:none;
+    outline:none;
+    background-color: var(--redcolor);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: 0.1s ease-in-out;
+}
+.loadmore:hover{
+    background-color: red;
+    margin: auto;
+}
+
+@media (max-width: 530px) {
+    .items-card{
+        flex-direction: column;
+        width:100%;
+    }
+    .items-card-description{
+        height: auto;
+        padding: 2rem;
+    }
+    .items-card-img-container{
+        width:auto;
+    }
+}
+.extras , .extraZ{
+    display: none;
+}
+.show{
+    display: flex;
+}
+@media (max-width: 390px) {
+    .items-card-img-container{
+        height: 12rem;
+        width:auto;
+    }
+    .items-card-description{
+        padding: 1rem;
+    }
+}

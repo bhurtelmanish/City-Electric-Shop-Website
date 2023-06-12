@@ -1,0 +1,98 @@
+#about{
+    min-height: auto;
+    width:100vw;
+    padding: 3rem 0 0 0;
+    text-align: center;
+}
+.about-header{
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+.about-profiles-container{
+    height: auto;
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap:4rem;
+}
+/* Card designing */
+.about-card{
+    background-color: rgb(247, 247, 247);
+    height: 18rem;
+    width:52rem;
+    display: flex;
+}
+/* Image inside card designing */
+.about-card-image{
+    height: 100%;
+    width:50%;
+}
+.about-contact-btn{
+    height: 2.5rem;
+    width: 7.5rem;
+    background-color: var(--redcolor);
+    color:white;
+    border:none;
+    outline:none;
+    transition: .1s ease-in-out;
+    cursor: pointer;
+}
+.about-contact-btn:hover{
+    background-color: red;
+}
+.about-card-description{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 0 0 2rem;
+}
+.about-card-description p{
+   margin: 1rem 0 1.5rem 0;
+}
+.about-card-description h1{
+    font-size: 2rem;
+ }
+ 
+
+@media (max-width: 900px) {
+    .about-card-description h1{
+        font-size: 1.5rem;
+     }
+    .about-profiles-container{
+        /* background-color: blue; */
+        padding: 0 2rem 0 2rem;
+    }
+    .about-card-image{
+        height: auto;
+        width:100%;
+    }
+    .about-card{
+        flex-direction: column;
+        height: auto;
+        width:30rem;
+    }
+    .about-card-description h1{
+        margin-top: 2rem;
+    }
+    .about-contact-btn{
+        margin-bottom: 2rem;
+    }
+    .about-card-description{
+        padding: 0 2rem 0 2rem;
+    }
+}
+
+@media (max-width: 530px) {
+    .about-card{
+        width:20rem;
+    }
+}
+@media (max-width: 350px) {
+    .about-card{
+        width:15rem;
+    }
+}
